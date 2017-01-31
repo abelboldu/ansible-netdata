@@ -45,7 +45,7 @@
       - cp /tmp/netdata/system/netdata.service /etc/systemd/system/
       - systemctl daemon-reload
       - systemctl enable netdata
-      - service netdata restart
+      - systemctl start netdata
     when: clone_or_pull.changed == True and netdata_systemd == True
     become: true
     tags:

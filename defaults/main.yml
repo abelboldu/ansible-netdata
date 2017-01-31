@@ -2,6 +2,7 @@
 # defaults file for leanbit.netdata
 netdata_install_dir: /opt
 netdata_systemd: True
+netdata_port: 80
 netdata_deps:
   - zlib1g-dev
   - uuid-dev
@@ -14,4 +15,4 @@ netdata_deps:
   - autogen
   - automake
   - pkg-config
-netdata_version: v1.4.0
+netdata_version: v1.5.0
