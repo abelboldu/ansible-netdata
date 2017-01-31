@@ -41,11 +41,8 @@
   - name: NETDATA | Configure Systemd
     command: "{{item}}"
     with_items:
-      - killall netdata
       - cp /tmp/netdata/system/netdata.service /etc/systemd/system/
-      - systemctl daemon-reload
       - systemctl enable netdata
-      - systemctl start netdata
     when: clone_or_pull.changed == True and netdata_systemd == True
     become: true
     tags:
